@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>tipsy</title>
+<link rel="stylesheet" href="css/tipsy.css" type="text/css" charset="utf-8">
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="js/jquery.tipsy.js"></script>
+</head>
+<body>
+	<a id='s' href='www.baidu.com' original-title='hello a'>链接</a>
+	<input id='ip'original-title='hello input'>
+</body>
+<script>
+$('#s').tipsy({gravity:'w'});
+$('#ip').tipsy({
+        gravity: 'w',
+        title: function(){return 'good'},
+        trigger: 'focus',
+        delayIn: 200,
+        delayOut: 300,
+        html: true,
+        fade: true
+        });
+</script>
+</html>
+
